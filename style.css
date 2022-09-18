@@ -1,15 +1,48 @@
 * {
     margin: 0;
     padding: 0;
-    color: black;
+}
+
+html {
+    height: 100%;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.templates-wrapper {
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    height: 40vh;
+    width: 60vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-templates-wrapper {
+.template {
+    height: 25vh;
+    width: 20vw;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid grey;
+    border-radius: 10px;
+    border-spacing: 10px;
 
+    background-image: url('ghost.png');
+    background-origin: padding-box;
+    background-clip: padding-box;
+    background-size: cover;
+}
+
+.template-title {
+    position: absolute;
+    top: calc(12.5vh - 1rem);
+    left: calc(10vw - 3rem);
+    z-index: 1;
 }
