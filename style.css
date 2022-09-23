@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
 }
 
 html {
@@ -33,16 +36,35 @@ body {
     border: 1px solid grey;
     border-radius: 10px;
     border-spacing: 10px;
-
-    background-image: url('ghost.png');
-    background-origin: padding-box;
-    background-clip: padding-box;
-    background-size: cover;
+    cursor: pointer;
 }
 
 .template-title {
     position: absolute;
-    top: calc(12.5vh - 1rem);
-    left: calc(10vw - 3rem);
+    top: calc(12.5vh - 0rem);
+    left: calc(10vw - 1rem);
     z-index: 1;
+    visibility: hidden;
+    font-weight: bold;
+    color: black;
+
+    transition: all 0.05s linear;
+}
+
+.template-image {
+    background-image: url('ghost.png');
+    background-origin: padding-box;
+    background-clip: padding-box;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(0px);
+
+    transition: all 0.1s linear;
+}
+.template:hover .template-image {
+    filter: blur(4px);
+}
+.template:hover .template-title {
+    visibility: visible;
 }
